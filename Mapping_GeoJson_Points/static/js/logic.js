@@ -34,10 +34,18 @@ L.control.layers(baseMaps).addTo(map);
 // Accessing the airport GeoJSON URL
 let airportData = "https://raw.githubusercontent.com/Myorignl/Mapping_Earthquakes/main/majorAirports.json";
 
-// Grabbing our GeoJSON data.
+//skill drill - add pop up to markers on map 
+let airportMarker = new L.LayerGroup();
+// Grabbing out GeoJSON data.
 d3.json(airportData).then(function(data) {
     console.log(data);
-  // Creating a GeoJSON layer with the retrieved data.
-  L.geoJSON(data).addTo(map);
-});
+    // Creating a GeoJSON layer with the retrieved data.
+    L.geoJSON(data, {
+        onEachFeature: function(feature, layer){
+            console.log(feature)
+            layer.bindPopup("<h2> Airport code: " + feature.properties.faa + "</h2><hr><h2> Airport name: " + feature.properties.name + "</h2>");
+        }
+    }).addTo(airportMarker);
 
+    airportMarker.addTo(map);
+});
