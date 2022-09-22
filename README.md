@@ -15,7 +15,10 @@ The purpose of this project is to visually show the differences between the magn
 
 # Deliverable 3
 
-- Adding third Map. display earthquakes and tectonic plates data sets
+- Adding third Map. display earthquakes and tectonic plates data sets, attempt to toggle beween legends included however it did not work. 
+
+![image](https://user-images.githubusercontent.com/104601282/191650298-31013f36-f2a5-457a-a0de-ec58c55562d8.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/104601282/191649805-6329462c-1471-4168-8e26-b79fdd2841e1.png)
